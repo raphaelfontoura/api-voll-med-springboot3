@@ -9,3 +9,9 @@ https://trello.com/b/ckGEyxEx/api-voll-med
 https://www.figma.com/file/N4CgpJqsg7gjbKuDmra3EV/Voll.med?node-id=2-1007
 
 https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007&t=a9BnvDKSq9daurIU-0
+
+-----
+
+***[Para saber mais:](./saber-mais)***
+
+- [Erro na Migration](./saber-mais/erro-na-migration.md)
