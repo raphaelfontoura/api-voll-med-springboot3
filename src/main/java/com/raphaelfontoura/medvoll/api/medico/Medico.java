@@ -34,4 +34,10 @@ public class Medico {
         especialidade = dados.especialidade();
         endereco = new Endereco(dados.endereco());
     }
+
+    public void atualizarInformacoes(DadosAtualizaMedico dados) {
+        if (dados.nome() != null) nome = dados.nome();
+        if (dados.telefone() != null) telefone = dados.telefone();
+        if (dados.endereco() != null) endereco.atualizarInformacoes(dados.endereco());
+    }
 }
