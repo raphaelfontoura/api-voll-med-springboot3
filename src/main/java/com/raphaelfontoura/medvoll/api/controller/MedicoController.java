@@ -6,11 +6,13 @@ import com.raphaelfontoura.medvoll.api.medico.Medico;
 import com.raphaelfontoura.medvoll.api.medico.MedicoRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("medicos")
@@ -26,7 +28,7 @@ public class MedicoController {
     }
 
     @GetMapping
-    public List<DadosListagemMedico> listar() {
-        return repository.findAll().stream().map(DadosListagemMedico::new).toList();
+    public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort = {"nome"},  direction = Sort.Direction.ASC) Pageable pageable) {
+        return repository.findAll(pageable).map(DadosListagemMedico::new);
     }
 }

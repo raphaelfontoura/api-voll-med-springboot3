@@ -1,4 +1,4 @@
-### Para saber mais: Erro na migration
+## Para saber mais: Erro na migration
 
 Conforme orientado ao longo dessa aula é importante sempre parar o projeto ao criar os arquivos de migrations, para evitar que o Flyway os execute antes da hora, com o código ainda incompleto, causando com isso problemas.
 
