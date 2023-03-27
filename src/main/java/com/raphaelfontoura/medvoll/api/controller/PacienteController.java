@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -18,6 +19,7 @@ public class PacienteController {
     private final PacienteRepository repository;
 
     @PostMapping
+    @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroPaciente dadosPaciente, UriComponentsBuilder uriBuilder) {
         var paciente = new Paciente(dadosPaciente);
         repository.save(paciente);
@@ -34,15 +36,24 @@ public class PacienteController {
 
     @GetMapping
     public ResponseEntity<Page<DadosListagemPacientes>> listar(@PageableDefault(size = 10, sort = "nome") Pageable pageable) {
-        var listaPacientes = repository.findAll(pageable);
+        var listaPacientes = repository.findAllByAtivoTrue(pageable);
         return ResponseEntity.ok(listaPacientes.map(DadosListagemPacientes::new));
     }
 
     @PutMapping
+    @Transactional
     public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizaPaciente dados) {
         var paciente = repository.getReferenceById(dados.id());
         paciente.atualizaDados(dados);
         return ResponseEntity.ok(new DadosDetalhePaciente(paciente));
+    }
+
+    @DeleteMapping("{id}")
+    @Transactional
+    public ResponseEntity deletar(@PathVariable Long id) {
+        var paciente = repository.getReferenceById(id);
+        paciente.excluir();
+        return ResponseEntity.noContent().build();
     }
 
 }
