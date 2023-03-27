@@ -30,4 +30,10 @@ public class Paciente {
         cpf = dadosPaciente.cpf();
         endereco = new Endereco(dadosPaciente.endereco());
     }
+
+    public void atualizaDados(DadosAtualizaPaciente dados) {
+        if (dados.nome() != null && ! dados.nome().isBlank()) nome = dados.nome();
+        if (dados.telefone() != null) telefone = dados.telefone();
+        if (dados.endereco() != null) endereco.atualizarInformacoes(dados.endereco());
+    }
 }

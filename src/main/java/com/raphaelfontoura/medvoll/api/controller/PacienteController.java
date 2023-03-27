@@ -38,5 +38,11 @@ public class PacienteController {
         return ResponseEntity.ok(listaPacientes.map(DadosListagemPacientes::new));
     }
 
+    @PutMapping
+    public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizaPaciente dados) {
+        var paciente = repository.getReferenceById(dados.id());
+        paciente.atualizaDados(dados);
+        return ResponseEntity.ok(new DadosDetalhePaciente(paciente));
+    }
 
 }
