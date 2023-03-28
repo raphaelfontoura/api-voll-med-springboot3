@@ -1,6 +1,6 @@
 package com.raphaelfontoura.medvoll.api.controller;
 
-import com.raphaelfontoura.medvoll.api.medico.*;
+import com.raphaelfontoura.medvoll.api.domain.medico.*;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

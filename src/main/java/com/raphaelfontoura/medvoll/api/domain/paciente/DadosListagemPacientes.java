@@ -1,4 +1,4 @@
-package com.raphaelfontoura.medvoll.api.paciente;
+package com.raphaelfontoura.medvoll.api.domain.paciente;
 
 public record DadosListagemPacientes(
         Long id,

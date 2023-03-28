@@ -1,4 +1,4 @@
-package com.raphaelfontoura.medvoll.api.paciente;
+package com.raphaelfontoura.medvoll.api.domain.paciente;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

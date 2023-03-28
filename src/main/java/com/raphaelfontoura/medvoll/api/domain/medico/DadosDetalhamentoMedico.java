@@ -1,6 +1,6 @@
-package com.raphaelfontoura.medvoll.api.medico;
+package com.raphaelfontoura.medvoll.api.domain.medico;
 
-import com.raphaelfontoura.medvoll.api.endereco.Endereco;
+import com.raphaelfontoura.medvoll.api.domain.endereco.Endereco;
 
 public record DadosDetalhamentoMedico(
         Long id,

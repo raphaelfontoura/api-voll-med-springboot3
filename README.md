@@ -20,3 +20,5 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 - [Mass Assigment Attack](./saber-mais/Mass-Assigment-Attack.md)
 - [Put ou Patch?](./saber-mais/Put-ou-Patch.md)
 - [Códigos do protocolo HTTP](./saber-mais/codigos-http.md)
+- [Propriedades do Spring Boot](./saber-mais/Spring-Boot-properties.md)
+- [Mensagens em Português](./saber-mais/Bean-Validation-msg-portugues.md)

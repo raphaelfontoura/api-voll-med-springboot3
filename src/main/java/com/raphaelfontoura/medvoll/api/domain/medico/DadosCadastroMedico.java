@@ -1,6 +1,6 @@
-package com.raphaelfontoura.medvoll.api.medico;
+package com.raphaelfontoura.medvoll.api.domain.medico;
 
-import com.raphaelfontoura.medvoll.api.endereco.DadosEndereco;
+import com.raphaelfontoura.medvoll.api.domain.endereco.DadosEndereco;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

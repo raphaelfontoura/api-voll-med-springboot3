@@ -1,6 +1,6 @@
-package com.raphaelfontoura.medvoll.api.medico;
+package com.raphaelfontoura.medvoll.api.domain.medico;
 
-import com.raphaelfontoura.medvoll.api.endereco.Endereco;
+import com.raphaelfontoura.medvoll.api.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

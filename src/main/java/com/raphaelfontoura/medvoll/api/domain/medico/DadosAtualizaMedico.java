@@ -1,9 +1,9 @@
-package com.raphaelfontoura.medvoll.api.paciente;
+package com.raphaelfontoura.medvoll.api.domain.medico;
 
-import com.raphaelfontoura.medvoll.api.endereco.DadosEndereco;
+import com.raphaelfontoura.medvoll.api.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
-public record DadosAtualizaPaciente(
+public record DadosAtualizaMedico(
         @NotNull
         Long id,
         String nome,
