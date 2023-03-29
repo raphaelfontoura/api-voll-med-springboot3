@@ -26,3 +26,4 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 - [Tipos de autenticação em APIs Rest](./saber-mais/tipos-autenticacao-api-rest.md)
 - [Hashing de senha](./saber-mais/hashing-de-senha.md)
 - [Documentação Spring Data](./saber-mais/documentacao-Spring-Data.md)
+- [JSON Web Token](./saber-mais/JSON-Web-Token.md)
