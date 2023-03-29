@@ -12,7 +12,7 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 
 -----
 
-***[Para saber mais:](./saber-mais)***
+### ***[Para saber mais:](./saber-mais)***
 
 - [Erro na Migration](./saber-mais/erro-na-migration.md)
 - [DTOs ou Entidades](./saber-mais/DTOs-ou-entidades.md)
@@ -22,3 +22,5 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 - [Códigos do protocolo HTTP](./saber-mais/codigos-http.md)
 - [Propriedades do Spring Boot](./saber-mais/Spring-Boot-properties.md)
 - [Mensagens em Português](./saber-mais/Bean-Validation-msg-portugues.md)
+- [Personalizando mensagens de erro](./saber-mais/Personalizando-msg-erro.md)
+- [Tipos de autenticação em APIs Rest](./saber-mais/tipos-autenticacao-api-rest.md)
