@@ -31,3 +31,5 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 - [Filters](./saber-mais/Filters.md)
 - [Controle de acesso por URL](./saber-mais/controle-acesso-por-url.md)
 - [Controle de acesso por aanotações](./saber-mais/controle-acesso-por-anotacoes.md)
+- [Anotação @JsonAlias](./saber-mais/anotacao-JsonAlias.md)
+- [Formatação de datas](./saber-mais/formatacao-de-datas.md)
