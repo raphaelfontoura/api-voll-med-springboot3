@@ -27,3 +27,7 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 - [Hashing de senha](./saber-mais/hashing-de-senha.md)
 - [Documentação Spring Data](./saber-mais/documentacao-Spring-Data.md)
 - [JSON Web Token](./saber-mais/JSON-Web-Token.md)
+- [Outras informações no token](./saber-mais/Outras-informacoes-no-token.md)
+- [Filters](./saber-mais/Filters.md)
+- [Controle de acesso por URL](./saber-mais/controle-acesso-por-url.md)
+- [Controle de acesso por aanotações](./saber-mais/controle-acesso-por-anotacoes.md)

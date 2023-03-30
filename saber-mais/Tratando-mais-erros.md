@@ -1,17 +1,8 @@
-package com.raphaelfontoura.medvoll.api.infra.exception;
+## Para saber mais: Tratando mais erros
 
-import jakarta.persistence.EntityNotFoundException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
+No curso não tratamos todos os erros possíveis que podem acontecer na API, mas aqui você encontra uma versão da classe TratadorDeErros abrangendo mais erros comuns:
 
+```java
 @RestControllerAdvice
 public class TratadorDeErros {
 
@@ -22,9 +13,8 @@ public class TratadorDeErros {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity tratarErro400(MethodArgumentNotValidException ex) {
-        var result = ex.getFieldErrors().stream()
-                .map(DadosErroValidacao::new).toList();
-        return ResponseEntity.badRequest().body(result);
+        var erros = ex.getFieldErrors();
+        return ResponseEntity.badRequest().body(erros.stream().map(DadosErroValidacao::new).toList());
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
@@ -52,11 +42,10 @@ public class TratadorDeErros {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " +ex.getLocalizedMessage());
     }
 
-
     private record DadosErroValidacao(String campo, String mensagem) {
-        public DadosErroValidacao(FieldError error) {
-            this(error.getField(), error.getDefaultMessage());
+        public DadosErroValidacao(FieldError erro) {
+            this(erro.getField(), erro.getDefaultMessage());
         }
-
     }
 }
+```
