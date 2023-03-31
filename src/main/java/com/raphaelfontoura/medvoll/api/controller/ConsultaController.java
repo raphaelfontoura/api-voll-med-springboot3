@@ -2,6 +2,7 @@ package com.raphaelfontoura.medvoll.api.controller;
 
 import com.raphaelfontoura.medvoll.api.domain.consulta.AgendaDeConsultas;
 import com.raphaelfontoura.medvoll.api.domain.consulta.DadosAgendamentoConsulta;
+import com.raphaelfontoura.medvoll.api.domain.consulta.DadosCancelamentoConsulta;
 import com.raphaelfontoura.medvoll.api.domain.consulta.DadosDetalhamentoConsulta;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -23,5 +24,12 @@ public class ConsultaController {
     @Transactional
     public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
         return ResponseEntity.ok(service.agendar(dados));
+    }
+
+    @PostMapping("cancelar")
+    @Transactional
+    public ResponseEntity cancelar(@RequestBody @Valid DadosCancelamentoConsulta dados) {
+        service.cancelar(dados);
+        return ResponseEntity.noContent().build();
     }
 }

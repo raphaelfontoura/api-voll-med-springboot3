@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Service
@@ -54,5 +55,14 @@ public class AgendaDeConsultas {
         if (localTime.isBefore(LocalTime.now().plusMinutes(30))) {
             throw new ValidacaoException("A consulta deve ser agendada com antecedência de 30 minutos");
         }
+    }
+
+    public void cancelar(DadosCancelamentoConsulta dados) {
+        var consulta = consultaRepository.getReferenceById(dados.idConsulta());
+        var dataConsulta = consulta.getData();
+        if (dataConsulta.isBefore(LocalDateTime.now()) && dataConsulta.isAfter(LocalDateTime.now().plusDays(1))) {
+            throw new ValidacaoException("A consulta só pode ser cancelada com antecedência mínima de 24 horas");
+        }
+        consultaRepository.deleteById(dados.idConsulta());
     }
 }
