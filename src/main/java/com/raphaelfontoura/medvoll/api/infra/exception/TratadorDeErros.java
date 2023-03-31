@@ -1,5 +1,6 @@
 package com.raphaelfontoura.medvoll.api.infra.exception;
 
+import com.raphaelfontoura.medvoll.api.domain.exception.ValidacaoException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
