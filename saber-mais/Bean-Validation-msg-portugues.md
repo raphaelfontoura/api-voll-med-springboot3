@@ -8,6 +8,6 @@ No Insomnia, e também nas outras ferramentas similares, existe uma opção cham
 
 Aba Header no Isomnia contendo os cabeçalhos da requisição, incluindo o cabeçalho **Accept-Language**
 
-![img.png](imgs/img.png)
+![Imagem mostrando onde cofigurar os headers no Insomnia](imgs/img_insomnia.png )
 
 Obs: O Bean Validation tem tradução das mensagens de erro apenas para alguns poucos idiomas.
