@@ -35,3 +35,4 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 - [Formatação de datas](./saber-mais/formatacao-de-datas.md)
 - [Service Pattern](./saber-mais/Service-pattern.md)
 - [Princípios SOLID](./saber-mais/principios-SOLID.md)
+- [OpenAPI Initiative](./saber-mais/OpenAPI-Initiative.md)
