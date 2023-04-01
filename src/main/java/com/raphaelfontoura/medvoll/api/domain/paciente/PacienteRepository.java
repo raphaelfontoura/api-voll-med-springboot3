@@ -3,6 +3,7 @@ package com.raphaelfontoura.medvoll.api.domain.paciente;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -13,5 +14,9 @@ public interface PacienteRepository extends JpaRepository<Paciente, Long> {
 
     Optional<Paciente> findByIdAndAtivoTrue(Long id);
 
-    Boolean findAtivoById(Long id);
+    @Query("""
+            select p.ativo from Paciente p
+            where p.id = :id
+            """)
+    Boolean getAtivoById(Long id);
 }
