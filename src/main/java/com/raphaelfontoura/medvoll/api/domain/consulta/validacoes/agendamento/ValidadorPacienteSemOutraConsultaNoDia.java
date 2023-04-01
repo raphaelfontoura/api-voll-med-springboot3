@@ -1,4 +1,4 @@
-package com.raphaelfontoura.medvoll.api.domain.consulta.validacoes;
+package com.raphaelfontoura.medvoll.api.domain.consulta.validacoes.agendamento;
 
 import com.raphaelfontoura.medvoll.api.domain.consulta.ConsultaRepository;
 import com.raphaelfontoura.medvoll.api.domain.consulta.DadosAgendamentoConsulta;

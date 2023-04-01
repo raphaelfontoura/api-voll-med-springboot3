@@ -1,4 +1,4 @@
-package com.raphaelfontoura.medvoll.api.domain.consulta.validacoes;
+package com.raphaelfontoura.medvoll.api.domain.consulta.validacoes.agendamento;
 
 import com.raphaelfontoura.medvoll.api.domain.consulta.ConsultaRepository;
 import com.raphaelfontoura.medvoll.api.domain.consulta.DadosAgendamentoConsulta;
@@ -14,7 +14,7 @@ public class ValidadorMedicoComOutraConsultaNoMesmoHorario implements ValidadorA
 
     @Override
     public void validar(DadosAgendamentoConsulta dados) {
-        var medicoPossuiOutraConsulta = repository.existsByMedicoIdAndData(dados.idMedico(), dados.data());
+        var medicoPossuiOutraConsulta = repository.existsByMedicoIdAndDataAndMotivoCancelamentoIsNull(dados.idMedico(), dados.data());
         if (medicoPossuiOutraConsulta) {
             throw new ValidacaoException("Médico já possui outra consulta agendada nesse mesmo horário.");
         }
