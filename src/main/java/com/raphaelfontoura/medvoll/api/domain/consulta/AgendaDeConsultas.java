@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Arrays;
 
 @Service
 @RequiredArgsConstructor
@@ -29,7 +30,7 @@ public class AgendaDeConsultas {
         }
         var medico = escolherMedico(dados);
 
-        var consulta = new Consulta(null, medico, paciente, dados.data());
+        var consulta = new Consulta(null, medico, paciente, dados.data(), null);
 
         consultaRepository.save(consulta);
         return new DadosDetalhamentoConsulta(consulta);
@@ -63,6 +64,7 @@ public class AgendaDeConsultas {
         if (dataConsulta.isBefore(LocalDateTime.now()) && dataConsulta.isAfter(LocalDateTime.now().plusDays(1))) {
             throw new ValidacaoException("A consulta só pode ser cancelada com antecedência mínima de 24 horas");
         }
-        consultaRepository.deleteById(dados.idConsulta());
+        consulta.setMotivoCancelamento(dados.motivo());
+        consultaRepository.save(consulta);
     }
 }

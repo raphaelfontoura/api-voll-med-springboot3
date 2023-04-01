@@ -3,10 +3,7 @@ package com.raphaelfontoura.medvoll.api.domain.consulta;
 import com.raphaelfontoura.medvoll.api.domain.medico.Medico;
 import com.raphaelfontoura.medvoll.api.domain.paciente.Paciente;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -30,4 +27,9 @@ public class Consulta {
     private Paciente paciente;
 
     private LocalDateTime data;
+
+    @Column(name = "motivo_cancelamento")
+    @Enumerated(EnumType.STRING)
+    @Setter
+    private MotivoCancelamento motivoCancelamento;
 }
