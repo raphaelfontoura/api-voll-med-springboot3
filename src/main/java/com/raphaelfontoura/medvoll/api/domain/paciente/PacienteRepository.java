@@ -11,5 +11,7 @@ import java.util.Optional;
 public interface PacienteRepository extends JpaRepository<Paciente, Long> {
     Page<Paciente> findAllByAtivoTrue(Pageable pageable);
 
-    Optional<Paciente> findByIdAndAtivoTrue(Long aLong);
+    Optional<Paciente> findByIdAndAtivoTrue(Long id);
+
+    Boolean findAtivoById(Long id);
 }
