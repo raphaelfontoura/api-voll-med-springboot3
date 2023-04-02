@@ -38,3 +38,5 @@ https://www.figma.com/file/URYPcEdcoxtkHQobXzLtIQ/Voll.med-(Copy)?node-id=2-1007
 - [OpenAPI Initiative](./saber-mais/OpenAPI-Initiative.md)
 - [Personalizando a documentação](./saber-mais/personalizando-documentacao.md)
 - [Testes com in-memory database](./saber-mais/testes-databases-in_memory.md)
+- [Build com arquivo .war](./saber-mais/build-com-arquivo-war.md)
+- [GraalVM Native Image](./saber-mais/graalvm-native-image.md)
